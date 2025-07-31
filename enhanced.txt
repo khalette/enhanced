@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 0 2em 0;
+            background: #f9f9f9;
+        }
+        header, section, footer {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1.5em;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #eee;
+        }
+        h1, h2 {
+            color: #2d5a88;
+        }
+        nav ul {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            gap: 1em;
+        }
+        nav a {
+            text-decoration: none;
+            color: #2d5a88;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+        }
+        table, th, td {
+            border: 1px solid #bbb;
+        }
+        th, td {
+            padding: 0.7em;
+            text-align: left;
+        }
+        tbody tr:nth-child(even) {
+            background: #f2f6fa;
+        }
+        figure {
+            margin: 1em 0;
+            text-align: center;
+        }
+        figcaption {
+            font-size: 0.95em;
+            color: #555;
+        }
+        form {
+            margin-top: 2em;
+        }
+        fieldset {
+            margin-bottom: 1.5em;
+            border: 1px solid #bbb;
+            padding: 1em;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: 500;
+        }
+        input, select, textarea {
+            width: 100%;
+            font-size: 1em;
+            margin-bottom: 1em;
+            padding: 0.5em;
+            border: 1px solid #bbb;
+            border-radius: 3px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            margin-right: 0.5em;
+        }
+        .form-actions {
+            text-align: right;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>HTML5 Enhanced Content & Form Demo</h1>
+    <nav>
+        <ul>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#table">Table</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#form">HTML5 Form</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="lists">
+    <h2>1. Types of HTML Lists</h2>
+    <p>HTML provides various ways to structure information using lists. Here are examples of ordered, unordered, and definition lists:</p>
+    <div>
+        <h3>Unordered List: Favorite Fruits</h3>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Mango</li>
+            <li>Strawberry</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Ordered List: Steps to Make Tea</h3>
+        <ol>
+            <li>Boil water</li>
+            <li>Add tea leaves</li>
+            <li>Steep for 3-5 minutes</li>
+            <li>Pour and enjoy</li>
+        </ol>
+    </div>
+    <div>
+        <h3>Definition List: HTML5 Terms</h3>
+        <dl>
+            <dt>&lt;section&gt;</dt>
+            <dd>Defines sections in a document, such as chapters, headers, or footers.</dd>
+            <dt>&lt;figure&gt;</dt>
+            <dd>Specifies self-contained content, like illustrations or diagrams.</dd>
+            <dt>&lt;fieldset&gt;</dt>
+            <dd>Groups related elements within a form.</dd>
+        </dl>
+    </div>
+</section>
+
+<section id="table">
+    <h2>2. Sample Table: Course Schedule</h2>
+    <table>
+        <caption>Web Technologies - July 2025 Course Schedule</caption>
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Assignment</th>
+                <th>Due Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>HTML Basics</td>
+                <td>Portfolio Page</td>
+                <td>July 5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>CSS Fundamentals</td>
+                <td>Styling Exercise</td>
+                <td>July 12</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Advanced HTML5</td>
+                <td>Semantic Layout</td>
+                <td>July 19</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Media & Forms</td>
+                <td>Interactive Form</td>
+                <td>July 26</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="media">
+    <h2>3. Embedded Media</h2>
+    <figure>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Lush green forest" width="350" height="220">
+        <figcaption>A beautiful forest. Source: Unsplash</figcaption>
+    </figure>
+    <figure>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <figcaption>Sample Audio: SoundHelix Song</figcaption>
+    </figure>
+    <figure>
+        <video width="350" height="200" controls poster="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <figcaption>Sample Video: Big Buck Bunny</figcaption>
+    </figure>
+</section>
+
+<section id="form">
+    <h2>4. Complete HTML5 Form</h2>
+    <form action="#" method="post" autocomplete="on" novalidate>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50" placeholder="Your full name">
+
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
+
+            <label for="dob">Date of Birth <span class="required">*</span></label>
+            <input type="date" id="dob" name="dob" required max="2025-07-31">
+        </fieldset>
+
+        <fieldset>
+            <legend>Course Preferences</legend>
+            <label for="interest">Main Area of Interest</label>
+            <select name="interest" id="interest" required>
+                <option value="">--Select--</option>
+                <option value="frontend">Front-End Development</option>
+                <option value="backend">Back-End Development</option>
+                <option value="fullstack">Full Stack</option>
+                <option value="uiux">UI/UX Design</option>
+            </select>
+
+            <label>Preferred Learning Mode <span class="required">*</span></label>
+            <input type="radio" id="online" name="mode" value="online" required>
+            <label for="online" style="display:inline;">Online</label>
+            <input type="radio" id="offline" name="mode" value="offline">
+            <label for="offline" style="display:inline;">Offline</label>
+            <input type="radio" id="hybrid" name="mode" value="hybrid">
+            <label for="hybrid" style="display:inline;">Hybrid</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Account Setup</legend>
+            <label for="username">Username <span class="required">*</span></label>
+            <input type="text" id="username" name="username" required minlength="5" maxlength="15" pattern="[A-Za-z0-9_]+" placeholder="5-15 letters, numbers, or _">
+
+            <label for="password">Password <span class="required">*</span></label>
+            <input type="password" id="password" name="password" required minlength="8" maxlength="32" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,32}" placeholder="Min 8 chars, 1 uppercase, 1 number">
+
+            <label for="avatar">Upload Avatar (optional, JPG/PNG only, max 2MB)</label>
+            <input type="file" id="avatar" name="avatar" accept=".jpg,.jpeg,.png" >
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" name="bio" rows="3" minlength="10" maxlength="250" placeholder="Tell us about yourself..."></textarea>
+
+            <label>
+                <input type="checkbox" name="terms" value="agree" required>
+                I agree to the <a href="#">terms and conditions</a> <span class="required">*</span>
+            </label>
+        </fieldset>
+
+        <div class="form-actions">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Enhanced HTML5 Demo by PLP-WebTechnologies</p>
+</footer>
+</body>
+</html>
